@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local"
+import localFont from "next/font/local";
 import "./globals.css";
+import Header from "@/components/header";
 
 const iranSans = localFont({
-  src: '../../public/fonts/IRANIAN-SANS.woff2',
-  variable: '--font-iranSans'
-})
+  src: "../../public/fonts/IRANIAN-SANS.woff2",
+  variable: "--font-iranSans",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,10 +19,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={iranSans.variable}
-      >
+    <html lang="en" dir="rtl">
+      <body className={`w-full h-svh ${iranSans.variable}`}>
+        <Header />
         {children}
       </body>
     </html>
