@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 
-const Container = ({children, className}: {children: React.ReactNode, className?: string}) => {
+
+export default function Container({children, className}: {children: React.ReactNode, className?: string}) {
     return (
         <div className={cn(
                 "md:container mx-auto p-4",
@@ -11,4 +12,3 @@ const Container = ({children, className}: {children: React.ReactNode, className?
     );
 }
 
-export default Container;
