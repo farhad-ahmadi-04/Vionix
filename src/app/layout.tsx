@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/header";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/components/appSidebar";
 
 const iranSans = localFont({
   src: "../../public/fonts/IRANIAN-SANS.woff2",
@@ -21,8 +23,16 @@ export default function RootLayout({
   return (
     <html lang="en" dir="rtl">
       <body className={`w-full h-svh ${iranSans.variable}`}>
-        <Header />
-        {children}
+        <SidebarProvider className="flex flex-col">
+          <AppSidebar />
+          <Header>
+            <SidebarTrigger className="block md:hidden" />
+          </Header>
+          <main className="flex w-full h-full">
+            
+            {children}
+          </main>
+        </SidebarProvider>
       </body>
     </html>
   );
