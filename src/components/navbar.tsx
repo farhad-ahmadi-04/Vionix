@@ -3,6 +3,7 @@
 import { Button } from "./ui/button";
 import items from '../lib/navbarItems';
 import {  usePathname } from "next/navigation";
+import Link from "next/link";
 
 
 function Navbar() {
@@ -15,7 +16,7 @@ const activeUrl = usePathname()
                 {items.map((item) => (
                     <li key={item.title}>
                         <Button asChild variant={"link"} >
-                            <a href={item.url} className={activeUrl === item.url ? "underline" : ""}>{item.title}</a>
+                            <Link href={item.url} className={activeUrl === item.url ? "underline" : ""}>{item.title}</Link>
                         </Button>
                     </li>
                 ))}
