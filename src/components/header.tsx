@@ -4,7 +4,7 @@ import Container from "./ui/container";
 import { ShoppingCart, User } from "lucide-react";
 import Navbar from "./navbar";
 
-export default function Header() {
+export default function Header({ children }: { children: React.ReactNode }) {
   return (
     <header>
       <Container>
@@ -17,7 +17,10 @@ export default function Header() {
               <User />
             </Button>
           </div>
-          <h1 className="hidden md:block w-full text-center font-bold text-4xl">VIONIX</h1>
+          <h1 className="hidden md:block w-full text-center font-bold text-4xl">
+            VIONIX
+          </h1>
+          {children}
           <div className="hidden md:block w-full text-left">
             <Input type="search" placeholder="جستجو..." className="w-3/5" />
           </div>
