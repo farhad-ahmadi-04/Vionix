@@ -22,11 +22,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" dir="rtl">
-      <body className={`w-full h-svh ${iranSans.variable}`}>
+      <body className={iranSans.variable}>
         <SidebarProvider className="flex flex-col">
           <AppSidebar />
           <Header>
-            <SidebarTrigger className="block md:hidden" />
+            <SidebarTrigger variant={"secondary"} size={"default"}  className="block md:hidden size-9" />
           </Header>
           <main className="flex w-full h-full">
             
