@@ -3,6 +3,7 @@ import { Button } from "./ui/button";
 import Container from "./ui/container";
 import { ShoppingCart, User } from "lucide-react";
 import Navbar from "./navbar";
+import { TypographyH2 } from "./typography";
 
 export default function Header({ children }: { children: React.ReactNode }) {
   return (
@@ -10,6 +11,7 @@ export default function Header({ children }: { children: React.ReactNode }) {
       <Container>
         <div className="flex justify-between items-center">
           <div className="w-full flex gap-2">
+            {children}
             <Button variant={"secondary"}>
               <ShoppingCart />
             </Button>
@@ -17,10 +19,9 @@ export default function Header({ children }: { children: React.ReactNode }) {
               <User />
             </Button>
           </div>
-          <h1 className="hidden md:block w-full text-center font-bold text-4xl">
+          <TypographyH2 className="w-full text-left md:text-center">
             VIONIX
-          </h1>
-          {children}
+          </TypographyH2>
           <div className="hidden md:block w-full text-left">
             <Input type="search" placeholder="جستجو..." className="w-3/5" />
           </div>
