@@ -17,7 +17,7 @@ import Link from "next/link"
 
 export function AppSidebar() {
   return (
-    <Sidebar side="right" >
+    <Sidebar className="md:hidden" side="right" >
       <SidebarContent>
         <SidebarGroup>
         <Input placeholder="جستجو..." className="mb-4" />
