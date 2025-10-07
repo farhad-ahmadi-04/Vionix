@@ -1,9 +1,11 @@
+import Container from "@/components/ui/container";
+
 function About() {
     return (
-        <div>
+        <Container>
             <h1>About Us</h1>
             <p>Welcome to the About page!</p>
-        </div>
+        </Container>
     );
 }
 
