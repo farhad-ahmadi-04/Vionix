@@ -1,26 +1,52 @@
-import '@/components/hero/heroStyle.css'
-import { TypographyH3 } from '@/components/typography';
+import "@/components/hero/heroStyle.css";
+import { TypographyH3 } from "@/components/typography";
 
 function Hero() {
-    return ( 
-        <section id="hero" className="relative size-full">
-        <div className="flex justify-center">
-          <div className="mask01 md:w-[350px] md:h-[350px] lg:w-[500px] lg:h-[250px] bg-amber-400"></div>
-          <div className="mask02 md:w-[350px] md:h-[350px] lg:w-[500px] lg:h-[200px] bg-amber-400"></div>
-          <div className="mask03 md:w-[350px] md:h-[350px] lg:w-[500px] lg:h-[250px] bg-amber-400"></div>
-        </div>
-        <div className="absolute inset-56 m-2">
-          <TypographyH3 className="text-center">
-            شما لایق بهترین ها هستید, با ما بهترین شوید...
-          </TypographyH3>
-        </div>
-        <div className="flex justify-center items-end">
-          <div className="mask04 md:w-[350px] md:h-[350px] lg:w-[500px] lg:h-[250px] bg-amber-400"></div>
-          <div className="mask05 md:w-[350px] md:h-[350px] lg:w-[500px] lg:h-[200px] bg-amber-400"></div>
-          <div className="mask06 md:w-[350px] md:h-[350px] lg:w-[500px] lg:h-[250px] bg-amber-400"></div>
-        </div>
-      </section>
-     );
+  return (
+    <section id="hero" className="relative size-full ">
+      <div className="flex justify-center -mb-6">
+        <svg viewBox="0 0 500 250" className="w-full max-w-[500px] h-auto">
+            <path d="M 10,20 A10,10 0,0,1 20,10 L 480,10 A10,10 0,0,1 490,20 L 490,230 A10,10 0,0,1 480,240 L 125,240 A10,10 0,0,1 115,230 L 115,160 A10,10 0,0,0 105,150 L 20,150 A10,10 0,0,1 10,140 Z" />
+        </svg>
+        <svg viewBox="0 0 500 250" className="hidden lg:block w-full max-w-[500px] h-auto">
+            <path d="M 10,20 A10,10 0,0,1 20,10 L 480,10 A10,10 0,0,1 490,20 L 490,140 A10,10 0,0,1 480,150 L 20,150 A10,10 0,0,1 10,140 Z" />
+        </svg>
+        <svg viewBox="0 0 500 250" className="w-full max-w-[500px] h-auto">
+            <path d="M 10,20 A10,10 0,0,1 20,10 L 480,10 A10,10 0,0,1 490,20 L 490,140 A10,10 0,0,1 480,150 L 395,150 A10,10 0,0,0 385,160 L 385,230 A10,10 0,0,1 375,240 L 20,240 A10,10 0,0,1 10,230 Z" />
+        </svg>
+        {/* <div className="mask01 md:w-[350px] md:h-[350px] lg:w-[500px] lg:h-[250px] bg-amber-400"></div>
+          <div className="mask02 md:hidden lg:block lg:w-[500px] lg:h-[200px] bg-amber-400"></div>
+          <div className="mask03 md:w-[350px] md:h-[350px] lg:w-[500px] lg:h-[250px] bg-amber-400"></div> */}
+      </div>
+      <div className="m-2">
+        <TypographyH3 className="text-center">
+          شما لایق بهترین ها هستید, با ما بهترین شوید...
+        </TypographyH3>
+      </div>
+      <div className="flex justify-center items-end -mt-5">
+        <svg viewBox="0 0 500 250" className="w-full max-w-[500px] h-auto">
+          <clipPath id="path">
+            <path d="M 10,100 A10,10 0,0,1 20,90 L 105,90 A10,10 0,0,0 115,80 L 115,20 A10,10 0,0,1 125,10 L 480,10 A10,10 0,0,1 490,20 L 490,230 A10,10 0,0,1 480,240 L 20,240 A10,10 0,0,1 10,230 Z" />
+          </clipPath>
+            <img 
+            src="public/fullManModel.png"
+             alt="مدل مرد" 
+             width={400}
+             height={250}
+             clip-path="url(#path)" />
+        </svg>
+        <svg viewBox="0 0 500 200" className="hidden lg:block w-full max-w-[500px] h-auto">
+            <path d="M 10,50 A10,10 0,0,1 20,40 L 480,40 A10,10 0,0,1 490,50 L 490,180 A10,10 0,0,1 480,190 L 20,190 A10,10 0,0,1 10,180 Z" />
+        </svg>
+        <svg viewBox="0 0 500 250" className="w-full max-w-[500px] h-auto" fill="red">
+            <path d="M 10,20 A10,10 0,0,1 20,10 L 375,10 A10,10 0,0,1 385,20 L 385,80 A10,10 0,0,0 395,90 L 480,90 A10,10 0,0,1 490,100 L 490,230 A10,10 0,0,1 480,240 L 20,240 A10,10 0,0,1 10,230 Z" />
+        </svg>
+        {/* <div className="mask04 md:w-[350px] md:h-[350px] lg:w-1/3 lg:h-[250px] bg-amber-400"></div>
+        <div className="mask05 md:hidden lg:block  lg:w-1/3 lg:h-[200px] bg-amber-400"></div>
+        <div className="mask06 md:w-[350px] md:h-[350px] lg:w-1/3 lg:h-[250px] bg-amber-400"></div> */}
+      </div>
+    </section>
+  );
 }
 
 export default Hero;
