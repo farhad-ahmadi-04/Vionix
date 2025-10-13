@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" dir="rtl">
-      <body className={iranSans.variable}>
+      <body className={`${iranSans.variable} bg-muted`}>
         <SidebarProvider className="flex flex-col">
           <AppSidebar />
           <Header>
