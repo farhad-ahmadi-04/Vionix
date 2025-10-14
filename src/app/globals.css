@@ -5,6 +5,7 @@
 
 @theme inline {
   --font-iranSans: var(--font-iranSans);
+  --font-tehran: var(--font-tehran);
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
