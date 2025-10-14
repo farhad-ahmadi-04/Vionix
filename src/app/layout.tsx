@@ -4,10 +4,15 @@ import "./globals.css";
 import Header from "@/components/header";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/appSidebar";
+import { GridPattern } from "@/components/ui/grid-pattern";
 
 const iranSans = localFont({
   src: "../../public/fonts/IRANIAN-SANS.woff2",
   variable: "--font-iranSans",
+});
+const tehran = localFont({
+  src: "../../public/fonts/MJ_TEHRAN.woff2",
+  variable: "--font-tehran",
 });
 
 export const metadata: Metadata = {
@@ -22,14 +27,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" dir="rtl">
-      <body className={`${iranSans.variable} bg-muted`}>
+      <body className={`${iranSans.variable} ${tehran.variable} bg-muted`}>
         <SidebarProvider className="flex flex-col">
+           <GridPattern width={70} height={70} className="[mask-image:radial-gradient(200px_circle_at_center,white,transparent)] lg:[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]"/>
           <AppSidebar />
           <Header>
             <SidebarTrigger variant={"secondary"} size={"default"}  className="block md:hidden size-9" />
           </Header>
-          <main className="flex w-full h-full">
-            
+          <main className=" flex w-full h-full">
             {children}
           </main>
         </SidebarProvider>
