@@ -2,11 +2,14 @@ import "@/components/hero/heroStyle.css";
 import { TypographyH3 } from "@/components/typography";
 import { HeroImage } from "@/components/hero/rightBottomHero";
 import { HeroBackground, HeroFilter } from "./heroBackground";
+import Container from "../ui/container";
+import Link from "next/link";
+import { WordRotate } from "../ui/word-rotate";
 
 function Hero() {
   return (
-    <section id="hero" className="relative size-full ">
-      <div className="flex justify-center -mb-6">
+    <Container className="relative">
+      <div className="flex justify-center md:-mb-7 lg:-mb-14">
         <svg viewBox="0 0 500 250" className="w-full max-w-[500px] h-auto">
           <defs>
             <clipPath id="pathTopRight">
@@ -32,22 +35,32 @@ function Hero() {
             <HeroFilter />
           </defs>
           <HeroBackground clipPath="pathTopCenter" />
-          <HeroImage clipPath="pathTopCenter" image="/manModel01.png" height={350} />
+          <HeroImage
+            clipPath="pathTopCenter"
+            image="/manModel01.png"
+            height={350}
+          />
         </svg>
-        <svg viewBox="0 0 500 250" className="w-full max-w-[500px] h-auto">
-          <defs>
-            <clipPath id="pathTopLeft">
-              <path d="M 10,20 A10,10 0,0,1 20,10 L 480,10 A10,10 0,0,1 490,20 L 490,140 A10,10 0,0,1 480,150 L 395,150 A10,10 0,0,0 385,160 L 385,230 A10,10 0,0,1 375,240 L 20,240 A10,10 0,0,1 10,230 Z" />
-            </clipPath>
-            <HeroFilter />
-          </defs>
-          <HeroBackground clipPath="pathTopLeft" />
-          <HeroImage clipPath="pathTopLeft" image="/fullManModel.png" height={450} />
-        </svg>
+        <Link href="category/t-shirt" className="w-full max-w-[500px] h-auto">
+          <svg viewBox="0 0 500 250">
+            <defs>
+              <clipPath id="pathTopLeft">
+                <path d="M 10,20 A10,10 0,0,1 20,10 L 480,10 A10,10 0,0,1 490,20 L 490,140 A10,10 0,0,1 480,150 L 395,150 A10,10 0,0,0 385,160 L 385,230 A10,10 0,0,1 375,240 L 20,240 A10,10 0,0,1 10,230 Z" />
+              </clipPath>
+              <HeroFilter />
+            </defs>
+            <HeroBackground clipPath="pathTopLeft" />
+            <HeroImage
+              clipPath="pathTopLeft"
+              image="/fullManModel.png"
+              height={450}
+            />
+          </svg>
+        </Link>
       </div>
-      <div className="m-2">
-        <TypographyH3 className="text-center">
-          شما لایق بهترین ها هستید, با ما بهترین شوید...
+      <div>
+        <TypographyH3 className="font-tehran text-center lg:text-6xl">
+          <WordRotate words={["بهترین باشید", "با ما", "با بهترین ها", "با", "VIONIX"]}/>        
         </TypographyH3>
       </div>
       <div className="flex justify-center items-end -mt-5">
@@ -59,7 +72,11 @@ function Hero() {
             <HeroFilter />
           </defs>
           <HeroBackground clipPath="pathBottomRight" />
-          <HeroImage clipPath="pathBottomRight" image="/manModel.png" height={270} />
+          <HeroImage
+            clipPath="pathBottomRight"
+            image="/manModel.png"
+            height={270}
+          />
         </svg>
         <svg
           viewBox="0 0 500 200"
@@ -72,7 +89,12 @@ function Hero() {
             <HeroFilter />
           </defs>
           <HeroBackground clipPath="pathBottomCenter" />
-          <HeroImage clipPath="pathBottomCenter" image="/capModel.png" height={250} width={300} />
+          <HeroImage
+            clipPath="pathBottomCenter"
+            image="/capModel.png"
+            height={250}
+            width={300}
+          />
         </svg>
         <svg viewBox="0 0 500 250" className="w-full max-w-[500px] h-auto">
           <defs>
@@ -85,13 +107,11 @@ function Hero() {
           <HeroImage
             clipPath="pathBottomLeft"
             image="/istockphoto-2183222014-612x612-removebg-preview.png"
+            height={266}
           />
         </svg>
-        {/* <div className="mask04 md:w-[350px] md:h-[350px] lg:w-1/3 lg:h-[250px] bg-amber-400"></div>
-        <div className="mask05 md:hidden lg:block  lg:w-1/3 lg:h-[200px] bg-amber-400"></div>
-        <div className="mask06 md:w-[350px] md:h-[350px] lg:w-1/3 lg:h-[250px] bg-amber-400"></div> */}
       </div>
-    </section>
+    </Container>
   );
 }
 
