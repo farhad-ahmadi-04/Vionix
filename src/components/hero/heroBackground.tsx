@@ -24,6 +24,7 @@ export const HeroBackground = ({clipPath} : {clipPath: string}) => {
       clipPath={`url(#${clipPath})`}
       fill="rgba(200, 200, 220, 0.2)"
       filter="url(#glass)"
+      className="duration-200 group-hover:fill-cyan-950"
     />
   );
 };
