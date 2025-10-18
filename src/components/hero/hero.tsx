@@ -1,4 +1,3 @@
-import "@/components/hero/heroStyle.css";
 import { TypographyH3 } from "@/components/typography";
 import { HeroImage } from "@/components/hero/heroImage";
 import { HeroBackground, HeroFilter } from "./heroBackground";
