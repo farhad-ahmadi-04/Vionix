@@ -27,14 +27,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" dir="rtl">
-      <body className={`${iranSans.variable} ${tehran.variable} bg-muted`}>
+      <body className={`${iranSans.variable} ${tehran.variable} font-iranSans bg-muted`}>
         <SidebarProvider className="flex flex-col">
            <GridPattern width={70} height={70} className="[mask-image:radial-gradient(200px_circle_at_center,white,transparent)] lg:[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]"/>
           <AppSidebar />
           <Header>
             <SidebarTrigger variant={"secondary"} size={"default"}  className="block md:hidden size-9" />
           </Header>
-          <main className=" flex w-full h-full">
+          <main className="w-full h-full">
             {children}
           </main>
         </SidebarProvider>
