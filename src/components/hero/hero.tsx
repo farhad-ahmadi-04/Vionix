@@ -52,7 +52,7 @@ function Hero() {
             <HeroBackground clipPath="pathTopLeft" />
             <HeroImage
               clipPath="pathTopLeft"
-              image="/fullManModel.png"
+              image="/model01.png"
               height={450}
             />
           </Link>
